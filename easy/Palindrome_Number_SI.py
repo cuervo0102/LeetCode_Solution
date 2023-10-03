@@ -29,7 +29,13 @@ class Solution:
         right = num_str[middle:]
 
         for i in range(middle):
-            if left[i] != right[-(i + 1)]:
+            if left[i] != right[-1]:
                 return False
 
         return True
+
+
+s = Solution(212)
+
+print(s.check_palindrome())  # Output: True (121 is a palindrome)
+
